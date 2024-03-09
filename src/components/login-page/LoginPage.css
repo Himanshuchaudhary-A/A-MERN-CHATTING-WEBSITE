@@ -5,161 +5,304 @@
   box-sizing: border-box;
 }
 
+:root {
+  --dark-bg-color: #080710;
+  --light-bg-color: #f1f1f1;
+}
+
 body {
   background-color: #080710;
 }
 
+.ui-container {
 .login-page-container {
-  width: 430px;
-  height: 520px;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  left: 50%;
-  top: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  .shape {
-    height: 200px;
-    width: 200px;
-    position: absolute;
-    border-radius: 50%;
-  }
-
-  .shape-square {
-    bottom: -94px;
-    right: -97px;
-    height: 200px;
-    width: 200px;
-    position: absolute;
-    border-radius: 50%;
-    background: linear-gradient(to right, #ff512f, #f09819);
-  }
-
-  .or-text {
-    margin-top: 13px !important;
-  }
-
-  .shape:first-child {
-    background: linear-gradient(#1845ad, #23a2f6);
-    left: -102px;
-    top: -106px;
-  }
-
-
-  .login-page-form {
-    height: 491px;
-    width: 400px;
-    background-color: rgba(255, 255, 255, 0.13);
+    width: 430px;
+    height: 520px;
     position: absolute;
     transform: translate(-50%, -50%);
-    top: 50%;
     left: 50%;
-    border-radius: 10px;
-    backdrop-filter: blur(10px);
-    border: 2px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
-    padding: 50px 35px;
+    top: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
 
-  .login-page-form * {
-    font-family: "Poppins", sans-serif;
-    color: #ffffff;
-    letter-spacing: 0.5px;
-    outline: none;
-    border: none;
-  }
-
-  .credentials-area {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    margin-top: 78px;
-    width: 100%;
-  }
-
-  .password {
-    margin-top: 30px !important;
-
-    input {
-      border-bottom: 1px solid white;
-    }
-  }
-
-  .MuiButtonBase-root {
-    margin-bottom: 46px;
-  }
-
-  .button-area {
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 23px;
-
-    button {
-      background-image: linear-gradient(#0dccea, #0d70ea);
-      border: 0;
-      border-radius: 4px;
-      box-shadow: rgba(0, 0, 0, 0.3) 0 5px 15px;
-      box-sizing: border-box;
-      color: #fff;
-      cursor: pointer;
-      font-family: Montserrat, sans-serif;
-      font-size: 0.9em;
-      margin: 5px;
-      padding: 10px 15px;
-      text-align: center;
-      user-select: none;
-      -webkit-user-select: none;
-      touch-action: manipulation;
+    .shape {
+      height: 200px;
+      width: 200px;
+      position: absolute;
+      border-radius: 50%;
     }
 
-    .signup-button {
-      height: 92%;
+    .shape-square {
+      bottom: -94px;
+      right: -97px;
+      height: 200px;
+      width: 200px;
+      position: absolute;
+      border-radius: 50%;
+      background: linear-gradient(to right, #ff512f, #f09819);
     }
 
-    .login-button {
-      margin-top: 0px !important;
-      margin-bottom: 0px !important;
-    }
-  }
-
-  .social-login {
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
-
-    button {
-      margin: 10px;
+    .or-text {
+      margin-top: 13px !important;
     }
 
-    svg {
-      margin-right: 14px;
+    .shape:first-child {
+      background: linear-gradient(#1845ad, #23a2f6);
+      left: -102px;
+      top: -106px;
     }
-  }
 
-  .or-text {
-    margin-top: 13px;
-  }
+    .error-div {
+      display: flex;
+      flex-wrap: nowrap;
 
-  .login-here {
-    font-size: 22px !important;
-    display: flex;
-
-    svg {
-      margin: 4px 0px 0px 4px;
+      .error-message {
+        font-size: 15px;
+        color: red;
+      }
     }
-  }
 
-  .user-name {
-    margin-top: 10px;
-  }
 
-  a {
-    margin-left: auto;
-    margin-top: 13px;
-    text-decoration: none;
+    .login-page-form {
+      height: calc(100vh - 207px);
+      width: 400px;
+      background-color: rgba(255, 255, 255, 0.13);
+      position: absolute;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 50%;
+      border-radius: 10px;
+      backdrop-filter: blur(10px);
+      border: 2px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+      padding: 50px 35px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .show-button {
+      .MuiButtonBase-root {
+        margin-bottom: 0;
+      }
+    }
+
+    .login-page-form * {
+      font-family: "Poppins", sans-serif;
+      color: #ffffff;
+      letter-spacing: 0.5px;
+      outline: none;
+      border: none;
+    }
+
+    .credentials-area {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      margin-top: 78px;
+      width: 100%;
+    }
+
+    .password {
+      margin-top: 30px !important;
+
+      input {
+        border-bottom: 1px solid white;
+      }
+    }
+
+    .MuiButtonBase-root {
+      margin-bottom: 46px;
+    }
+
+    .button-area {
+      display: flex;
+      justify-content: space-evenly;
+      margin-top: 23px;
+
+      button {
+        background-image: linear-gradient(#0dccea, #0d70ea);
+        border: 0;
+        border-radius: 4px;
+        box-shadow: rgba(0, 0, 0, 0.3) 0 5px 15px;
+        box-sizing: border-box;
+        color: #fff;
+        cursor: pointer;
+        font-family: Montserrat, sans-serif;
+        font-size: 0.9em;
+        margin: 5px;
+        padding: 10px 15px;
+        text-align: center;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+      }
+
+      .signup-button {
+        height: 92%;
+      }
+
+      .login-button {
+        margin-top: 0px !important;
+        margin-bottom: 0px !important;
+      }
+    }
+
+    .social-login {
+      display: flex;
+      flex-direction: column;
+      margin-top: 20px;
+
+      button {
+        margin: 10px;
+      }
+
+      svg {
+        margin-right: 14px;
+      }
+    }
+
+    .or-text {
+      margin-top: 13px;
+    }
+
+    .login-here {
+      font-size: 22px !important;
+      display: flex;
+
+      svg {
+        margin: 4px 0px 0px 4px;
+      }
+    }
+
+    .user-name {
+      margin-top: 10px;
+    }
+
+    a {
+      margin-left: auto;
+      margin-top: 13px;
+      text-decoration: none;
+    }
+
+    @media only screen and (max-width: 600px) {
+      .login-page-container {
+        width: 90%;
+        height: auto;
+        padding: 20px;
+      }
+
+      .shape,
+      .shape-square,
+      .shape:first-child {
+        display: none;
+      }
+
+      .login-page-form {
+        width: 100%;
+        padding: 20px;
+      }
+
+      .credentials-area {
+        margin-top: 30px;
+      }
+
+      .button-area {
+        margin-top: 20px;
+      }
+
+      .social-login {
+        margin-top: 30px;
+      }
+
+      .or-text {
+        margin-top: 20px;
+      }
+
+      .login-here {
+        font-size: 18px;
+      }
+    }
+
+    @media only screen and (min-width: 601px) and (max-width: 900px) {
+      .login-page-container {
+        width: 70%;
+        height: auto;
+        padding: 30px;
+      }
+
+      .shape,
+      .shape-square,
+      .shape:first-child {
+        display: none;
+      }
+
+      .login-page-form {
+        width: 100%;
+        padding: 30px;
+      }
+
+      .credentials-area {
+        margin-top: 40px;
+      }
+
+      .button-area {
+        margin-top: 30px;
+      }
+
+      .social-login {
+        margin-top: 40px;
+      }
+
+      .or-text {
+        margin-top: 30px;
+      }
+
+      .login-here {
+        font-size: 20px;
+      }
+    }
+
+    @media only screen and (min-width: 901px) {
+      .login-page-container {
+        width: 50%;
+        height: auto;
+        padding: 40px;
+      }
+
+      .shape,
+      .shape-square,
+      .shape:first-child {
+        display: block;
+      }
+
+      .login-page-form {
+        width: 100%;
+        padding: 40px;
+      }
+
+      .credentials-area {
+        margin-top: 50px;
+      }
+
+      .button-area {
+        margin-top: 40px;
+      }
+
+      .social-login {
+        margin-top: 50px;
+      }
+
+      .or-text {
+        margin-top: 40px;
+      }
+
+      .login-here {
+        font-size: 24px;
+      }
+    }
+
   }
 }
+
