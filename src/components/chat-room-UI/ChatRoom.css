@@ -1,0 +1,158 @@
+
+.chat-room-container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+
+  .user-details-panel {
+    background: linear-gradient(to bottom, grey, black);
+    padding: 5px;
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-top-left-radius: 19px;
+    border-bottom-left-radius: 19px;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+  }
+
+  .chatList {
+    flex: 1;
+    overflow-y: auto;
+  }
+
+  .chatWindow {
+    flex: 3;
+    padding: 16px;
+    overflow-y: auto;
+  }
+
+  .detailsPanel {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 16px;
+    overflow-y: auto;
+  }
+
+  .settings {
+    position: absolute;
+    top: 431px;
+    right: 4px;
+    margin-bottom: 0px !important;
+  }
+
+  .user-dp {
+    position: absolute;
+    top: 10px;
+    left: 10.2px;
+  }
+
+  .MuiSvgIcon-root {
+    color: grey;
+  }
+
+ .grid-container {
+   display: grid;
+   grid-template-columns: 25% auto 25%;
+   /* Adjusted grid-template-columns */
+   grid-template-rows: auto;
+   height: 100vh;
+   overflow-x: hidden;
+ }
+
+ .grid-container>* {
+   padding: 0;
+   /* Remove padding from grid items */
+ }
+
+ /* Style the vertical divider */
+ .grid-container> :nth-child(odd) {
+   border-right: 1px solid #ccc;
+ }
+
+ /* Style the horizontal line between grids */
+ .grid-container> :not(:nth-child(3n)) {
+   border-bottom: 1px solid #ccc;
+   overflow: hidden;
+ }
+
+  .chat-searchbox {
+    margin-left: 10px;
+    .MuiInputBase-root {
+      border-radius: 12px;
+      width: 76%;
+      height: 6vh;
+          
+    }
+  }
+
+  .chatList {
+    .header-chatlist {
+      display: flex;
+    }
+  }
+
+  .sort-type {
+    height: 4vh;
+  }
+
+  .contact-details-panel-right {
+    position: absolute;
+    right: -43px;
+        display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+    top: 0;
+    width: 408px;
+    /* Adjust the width as needed */
+    height: 100%;
+    background-color: #fff;
+    border-left: 1px solid #ccc;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    z-index: 1;
+    /* Ensure the panel is above other elements */
+    overflow-y: hidden;
+    /* Enable vertical scrolling if content exceeds height */
+  }
+
+  .grid-container {
+    .contact-details-avatar {
+      height: 24vh;
+      width: 12vw;
+      margin-left: 64px;
+    }
+
+    .contact-details-name {
+      font-weight: 600;
+        margin-top: 26px;
+        margin-left: 107px;
+    }
+
+    .close-icon {
+          margin-left: 37vh;
+    }
+  }
+
+  .right-panel-details {
+    border: none;
+    box-shadow: none;
+  }
+}
+
+.dark-mode {
+  .chat-searchbox {
+  
+      .MuiInputBase-root {
+        background-color: #696969;
+      }
+      .MuiFormLabel-root {
+        display: none;
+      }
+    }
+
+    
+}
+
+

@@ -40,9 +40,9 @@ const LoginPage = () => {
       });
       if (res) {
         setIsUserAuthenticated(true);
+        navigate("/home");
       }
     } catch (err) {
-      
       setError("Incorrect password or email address ! Please Sign Up.");
       setIsUserAuthenticated(false);
     }
@@ -53,8 +53,6 @@ const LoginPage = () => {
       setError('')
     }
   },[isUserAuthenticated])
-
-  console.log(isUserAuthenticated)
 
   return (
     <Box className="login-page-container">

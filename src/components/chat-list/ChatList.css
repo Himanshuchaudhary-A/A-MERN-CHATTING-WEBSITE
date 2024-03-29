@@ -1,0 +1,57 @@
+.ui-container {
+.contact-card {
+        display: flex;
+        align-items: center;
+        padding: 12px;
+        margin-bottom: 10px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        background-color: white;
+        transition: box-shadow 0.3s ease;
+        margin-bottom: 10px !important;
+        height: 11vh;
+        border-radius: 17px !important;
+
+        &:hover {
+            box-shadow: 0 4px 8px rgb(0, 0, 0, 0.2);
+        }
+    }
+
+    .contact-card .MuiListItemIcon-root {
+        margin-right: 16px;
+        color: #757575;
+    }
+
+    .contact-card .MuiListItemText-root {
+        flex: 1;
+    }
+
+    .contact-card .MuiTypography-body2 {
+        color: #757575;
+        margin-left: auto;
+    }
+
+    .contact-name {
+        font-weight: 600;
+        color: black;
+    }
+}
+
+.dark-mode {
+    .contact-card {
+        background: linear-gradient(to bottom, grey, black);
+        &:hover {
+                box-shadow: 0 4px 8px rgb(251, 249, 249);
+                background-color: #696969;
+            }
+    }
+        .contact-card .MuiTypography-body2 {
+            color: white;
+            margin-left: auto;
+        }
+
+                .contact-name {
+                    color: #ffffff;
+                }
+}
+
