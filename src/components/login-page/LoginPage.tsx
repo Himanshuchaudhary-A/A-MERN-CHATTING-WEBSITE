@@ -34,7 +34,7 @@ const LoginPage = () => {
 
   const handleloginAction = async (email, password) => {
     try {
-      let res = await axios.post("http://localhost:3001/api/users/login", {
+      let res = await axios.post("http://localhost:8000/api/users/login", {
         email,
         password,
       });

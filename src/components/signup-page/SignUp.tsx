@@ -85,7 +85,7 @@ const SignUp = () => {
 
   const signup = async (values) => {
     try {
-      await axios.post("http://localhost:3001/api/users/signup", values);
+      await axios.post("http://localhost:8000/api/users/signup", values);
       console.log("Done");
     } catch (e) {
       console.log(e);
